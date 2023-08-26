@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- displays site properly based on user's device -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <title>Frontend Mentor | Expenses chart component</title>
+        <link rel="stylesheet" href="./style/style.css">
+<!--         <link rel="stylesheet" href="./style/normalize.css">-->    </head>
+
+    <body>
+
+        <div class="container">
+            
+            <section class="header">
+                <div class="header__info"
+                    <p>My balance</p>
+                    <span>$921.48</span>
+                </div>
+                <img src="./images/logo.svg" alt="Logo de la marca" class="header__img">
+            </section>
+
+            <section class="grafic">
+                <div class="grafic__title">
+                    <h1>Spending - Last 7 days</h1>
+                </div>
+
+                <div class="grafic__bar">
+                    <figure class="bars ">
+                        <div class="bar bars__mon"></div>
+                        <figcaption style="margin-left: 9px;">mon</figcaption>
+                    </figure>
+                    <figure class="bars ">
+                        <div class="bar bars__tue"></div>
+                        <figcaption>tue</figcaption>
+                    </figure>
+                    <figure class="bars ">
+                        <div class="bar bars__wed"></div>
+                        <figcaption>wed</figcaption>
+                    </figure>
+                    <figure class="bars">
+                        <div class="bar bars__thu"></div>
+                        <figcaption>thu</figcaption>
+                    </figure>
+                    <figure class="bars ">
+                        <div class="bar bars__fri"></div>
+                        <figcaption>fri</figcaption>
+                    </figure>
+                    <figure class="bars ">
+                        <div class="bar bars__sat"></div>
+                        <figcaption>sat</figcaption>
+                    </figure>
+                    <figure class="bars ">
+                        <div class="bar bars__sun"></div>
+                        <figcaption>sun</figcaption>
+                    </figure>
+                </div>
+
+                <hr class="hr">
+
+                <div class="grafic__footer">
+                    <section class="footer__infoPrice">
+                        <p>Total this month</p>
+                        <span>$478.33</span>
+                    </section>
+                    <section class="footer__infoPercentage">
+                        <span>+2.4%</span>
+                        <p>from last month</p>
+                    </section>
+                </div>
+            </section>
+        </div>
+
+        <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+        </div> -->
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>
