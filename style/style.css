@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
 
 :root {
-    /*Primary*/
     --Softred: hsl(10, 79%, 65%);
     --Cyan: hsl(186, 34%, 60%);
-    /*Neutral*/
     --Darkbrown: hsl(25, 47%, 15%);
     --Mediumbrown: hsl(28, 10%, 53%);
     --Cream: hsl(27, 66%, 92%);
     --Verypaleorange: hsl(33, 100%, 98%);
-    /*Fonts*/
     --Sans: 'DM Sans', sans-serif;
 }
 
@@ -17,28 +14,27 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--Cream);
-    font-family: var(--Sans);
     margin: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--Sans);
+    background-color: var(--Cream);
 }
 
 .container {
     width: 540px;
-    /*height: 700px;*/
 }
 
 .header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: var(--Softred);
+    justify-content: space-between;
+    margin-bottom: 20px;
     border-radius: 24px;
     font-size: 18px;
     color: var(--Verypaleorange);
-    margin-bottom: 20px;
+    background-color: var(--Softred);
 }
 
 .header__info {
@@ -69,39 +65,51 @@ body {
 
 .bars {
     margin: 0px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-direction: column;
     height: 244px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
 }
 
 .bar {
-    background-color: hsl(10, 79%, 65%);
     width: 50px;
     margin-bottom: 5px;
     border-radius: 5px;
-    animation: bar 2s linear;
     position: relative;
     display: flex;
     justify-content: center;
+    animation: bar 2s linear;
+    background-color: hsl(10, 79%, 65%);
 }
 
-.bar:hover{
-    background-color: hsl(10, 79%, 75%);
+.bar:hover {
     cursor: pointer;
+    background-color: hsl(10, 79%, 75%);
 }
 
-.bar::after{
-    position:absolute;
+.bar::after {
+    position: absolute;
     content: attr(data-content);
     width: auto;
     height: 20px;
     padding: 5px;
-    background-color: var(--Darkbrown);
-    color: var(--Verypaleorange);
     top: -39px;
+    border-radius: 5px;
     display: var(--prueba);
+    color: var(--Verypaleorange);
+    animation: scale-up-center 0.5s;
+    background-color: var(--Darkbrown);
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(.5)
+    }
+
+    100% {
+        transform: scale(1)
+    }
 }
 
 @keyframes bar {
@@ -116,11 +124,11 @@ body {
     }
 }
 
-.bars__wed{
+.bars__wed {
     background-color: hsl(186, 34%, 60%);
 }
 
-.bars__wed:hover{
+.bars__wed:hover {
     background-color: hsl(186, 34%, 75%);
 }
 
@@ -140,14 +148,13 @@ body {
 
 .grafic__footer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    /*margin-top: 60px;    */
+    justify-content: space-between;
 }
 
 .footer__infoPrice p {
-    font-size: 18px;
     margin: 0;
+    font-size: 18px;
     color: var(--Mediumbrown);
 }
 
@@ -159,8 +166,8 @@ body {
 
 .footer__infoPercentage {
     display: flex;
-    flex-direction: column;
     align-items: end;
+    flex-direction: column;
 }
 
 .footer__infoPercentage p {
@@ -192,11 +199,11 @@ body {
 }
 
 @media only screen and (max-width: 545px) {
-    .container{
+    .container {
         width: 468px;
     }
 
-    .bar{
+    .bar {
         width: 40px;
     }
 }
